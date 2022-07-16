@@ -30,26 +30,25 @@ class ColorAndSize extends StatelessWidget {
                   ColorDot(color: Color(0xFFA29B9B)),
                   ColorDot(color: Color.fromARGB(255, 230, 55, 55)),
                   ColorDot(color: Color.fromARGB(255, 16, 14, 14)),
+                  ColorDot(color: Color.fromARGB(255, 133, 227, 119)),
                 ],
               ),
             ],
           ),
         ),
-        Expanded(
-          child: RichText(
-            text: TextSpan(
-              style: TextStyle(color: kTextColor),
-              children: [
-                TextSpan(text: "Taille:\n"),
-                TextSpan(
-                  text: "${product.size} cm",
-                  style: Theme.of(context)
-                      .textTheme
-                      .headline5
-                      .copyWith(fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
+        RichText(
+          text: TextSpan(
+            style: TextStyle(color: kTextColor),
+            children: [
+              TextSpan(text: "Taille:\n"),
+              TextSpan(
+                text: "${product.size} cm",
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5
+                    .copyWith(fontWeight: FontWeight.bold),
+              )
+            ],
           ),
         ),
       ],
