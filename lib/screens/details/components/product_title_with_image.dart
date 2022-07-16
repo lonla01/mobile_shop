@@ -33,7 +33,7 @@ class ProductTitleWithImage extends StatelessWidget {
           Row(
             children: <Widget>[
               Padding(
-                padding: const EdgeInsets.only(top: 5 * kDefaultPaddin),
+                padding: const EdgeInsets.only(top: 7 * kDefaultPaddin),
                 child: RichText(
                   text: TextSpan(
                     children: [

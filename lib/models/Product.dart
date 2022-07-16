@@ -24,9 +24,11 @@ List<Color> allColors = [
   Color(0xFFD3A984),
   Color.fromARGB(255, 115, 111, 110),
   Color(0xFFE6B398),
-  Color.fromARGB(255, 207, 58, 31),
+  Color.fromARGB(255, 197, 104, 115),
   Color.fromARGB(255, 178, 173, 173),
 ];
+
+var allPrices = [15900, 17900, 11900, 9900, 19900, 15900];
 
 var products = createProducts();
 
@@ -36,10 +38,10 @@ List<Product> createProducts() {
     products.add(Product(
         id: i,
         title: "Office Code",
-        price: 234,
+        price: allPrices[i % allColors.length],
         size: 12,
         description: dummyText,
-        image: "./assets/images/bag_${1+i%12}.png",
+        image: "./assets/images/bag_${1 + i % 12}.png",
         color: allColors[i % allColors.length]));
   }
   return products;
