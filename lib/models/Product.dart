@@ -19,106 +19,31 @@ String baseUrl() {
   return "https://topshoes.herokuapp.com/Bags";
 }
 
-List<Product> products = [
-  Product(
-      id: 1,
-      title: "Office Code",
-      price: 234,
-      size: 12,
-      description: dummyText,
-      image: "./assets/images/bag_1.png",
-      color: Color(0xFF3D82AE)),
-  Product(
-      id: 2,
-      title: "Belt Bag",
-      price: 234,
-      size: 8,
-      description: dummyText,
-      image: "./assets/images/bag_2.png",
-      color: Color(0xFFD3A984)),
-  Product(
-      id: 3,
-      title: "Hang Top",
-      price: 234,
-      size: 10,
-      description: dummyText,
-      image: "./assets/images/bag_3.png",
-      color: Color(0xFF989493)),
-  Product(
-      id: 4,
-      title: "Old Fashion",
-      price: 234,
-      size: 11,
-      description: dummyText,
-      image: "./assets/images/bag_4.png",
-      color: Color(0xFFE6B398)),
-  Product(
-      id: 5,
-      title: "Office Code",
-      price: 234,
-      size: 12,
-      description: dummyText,
-      image: "./assets/images/bag_5.png",
-      color: Color(0xFFFB7883)),
-  Product(
-    id: 6,
-    title: "Office Code",
-    price: 234,
-    size: 12,
-    description: dummyText,
-    image: "./assets/images/bag_6.png",
-    color: Color(0xFFAEAEAE),
-  ),
-  Product(
-      id: 7,
-      title: "Office Code",
-      price: 234,
-      size: 12,
-      description: dummyText,
-      image: "./assets/images/bag_7.png",
-      color: Color(0xFF3D82AE)),
-  Product(
-      id: 8,
-      title: "Belt Bag",
-      price: 234,
-      size: 8,
-      description: dummyText,
-      image: "./assets/images/bag_8.png",
-      color: Color(0xFFD3A984)),
-  Product(
-      id: 9,
-      title: "Hang Top",
-      price: 234,
-      size: 10,
-      description: dummyText,
-      image: "./assets/images/bag_9.png",
-      color: Color(0xFF989493)),
-  Product(
-      id: 10,
-      title: "Old Fashion",
-      price: 234,
-      size: 11,
-      description: dummyText,
-      image: "./assets/images/bag_10.png",
-      color: Color(0xFFE6B398)),
-  Product(
-      id: 11,
-      title: "Office Code",
-      price: 234,
-      size: 12,
-      description: dummyText,
-      image: "./assets/images/bag_11.png",
-      color: Color(0xFFFB7883)),
-  Product(
-    id: 12,
-    title: "Office Code",
-    price: 234,
-    size: 12,
-    description: dummyText,
-    image: "./assets/images/bag_12.png",
-    color: Color(0xFFAEAEAE),
-  ),
+List<Color> allColors = [
+  Color.fromARGB(255, 210, 224, 224),
+  Color(0xFFD3A984),
+  Color.fromARGB(255, 115, 111, 110),
+  Color(0xFFE6B398),
+  Color.fromARGB(255, 207, 58, 31),
+  Color.fromARGB(255, 178, 173, 173),
 ];
+
+var products = createProducts();
+
+List<Product> createProducts() {
+  List<Product> products = [];
+  for (var i = 1; i <= 60; i++) {
+    products.add(Product(
+        id: i,
+        title: "Office Code",
+        price: 234,
+        size: 12,
+        description: dummyText,
+        image: "./assets/images/bag_${1+i%12}.png",
+        color: allColors[i % allColors.length]));
+  }
+  return products;
+}
 
 String dummyText =
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since. When an unknown printer took a galley.";

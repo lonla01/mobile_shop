@@ -40,6 +40,7 @@ class Body extends StatelessWidget {
                   ),
                   child: Column(
                     children: <Widget>[
+                      SizedBox(height: 3*kDefaultPaddin),
                       ColorAndSize(product: product),
                       SizedBox(height: kDefaultPaddin / 2),
                       Description(product: product),

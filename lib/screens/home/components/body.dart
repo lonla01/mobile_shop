@@ -13,9 +13,9 @@ class Body extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          padding: const EdgeInsets.only(left: kDefaultPaddin, top: kDefaultPaddin),
           child: Text(
-            "Women",
+            "Mode femme",
             style: Theme.of(context)
                 .textTheme
                 .headline5

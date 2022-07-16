@@ -19,7 +19,7 @@ class ColorAndSize extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text("Color"),
+              Text("Couleur:"),
               Row(
                 children: <Widget>[
                   ColorDot(
@@ -28,6 +28,8 @@ class ColorAndSize extends StatelessWidget {
                   ),
                   ColorDot(color: Color(0xFFF8C078)),
                   ColorDot(color: Color(0xFFA29B9B)),
+                  ColorDot(color: Color.fromARGB(255, 230, 55, 55)),
+                  ColorDot(color: Color.fromARGB(255, 16, 14, 14)),
                 ],
               ),
             ],
@@ -38,7 +40,7 @@ class ColorAndSize extends StatelessWidget {
             text: TextSpan(
               style: TextStyle(color: kTextColor),
               children: [
-                TextSpan(text: "Size\n"),
+                TextSpan(text: "Taille:\n"),
                 TextSpan(
                   text: "${product.size} cm",
                   style: Theme.of(context)
