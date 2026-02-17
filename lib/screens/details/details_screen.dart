@@ -7,7 +7,7 @@ import 'package:shop_app/screens/details/components/body.dart';
 class DetailsScreen extends StatelessWidget {
   final Product product;
 
-  const DetailsScreen({Key key, this.product}) : super(key: key);
+  const DetailsScreen({super.key, required this.product});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +25,7 @@ class DetailsScreen extends StatelessWidget {
       leading: IconButton(
         icon: SvgPicture.asset(
           'assets/icons/back.svg',
+          // ignore: deprecated_member_use
           color: Colors.white,
         ),
         onPressed: () => Navigator.pop(context),

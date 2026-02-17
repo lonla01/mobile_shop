@@ -25,6 +25,7 @@ class HomeScreen extends StatelessWidget {
           icon: SvgPicture.asset(
             "assets/icons/search.svg",
             // By default our  icon color is white
+            // ignore: deprecated_member_use
             color: kTextColor,
           ),
           onPressed: () {},
@@ -33,6 +34,7 @@ class HomeScreen extends StatelessWidget {
           icon: SvgPicture.asset(
             "assets/icons/cart.svg",
             // By default our  icon color is white
+            // ignore: deprecated_member_use
             color: kTextColor,
           ),
           onPressed: () {},

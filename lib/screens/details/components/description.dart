@@ -5,9 +5,9 @@ import '../../../constants.dart';
 
 class Description extends StatelessWidget {
   const Description({
-    Key key,
-    @required this.product,
-  }) : super(key: key);
+    super.key,
+    required this.product,
+  });
 
   final Product product;
 

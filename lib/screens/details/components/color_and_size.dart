@@ -5,9 +5,9 @@ import '../../../constants.dart';
 
 class ColorAndSize extends StatelessWidget {
   const ColorAndSize({
-    Key key,
-    @required this.product,
-  }) : super(key: key);
+    super.key,
+    required this.product,
+  });
 
   final Product product;
 
@@ -45,7 +45,7 @@ class ColorAndSize extends StatelessWidget {
                 text: "${product.size} cm",
                 style: Theme.of(context)
                     .textTheme
-                    .headline5
+                    .headlineSmall!
                     .copyWith(fontWeight: FontWeight.bold),
               )
             ],
@@ -60,11 +60,11 @@ class ColorDot extends StatelessWidget {
   final Color color;
   final bool isSelected;
   const ColorDot({
-    Key key,
-    this.color,
+    super.key,
+    required this.color,
     // by default isSelected is false
     this.isSelected = false,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

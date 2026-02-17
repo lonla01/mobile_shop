@@ -6,9 +6,9 @@ import '../../../constants.dart';
 
 class AddToCart extends StatelessWidget {
   const AddToCart({
-    Key key,
-    @required this.product,
-  }) : super(key: key);
+    super.key,
+    required this.product,
+  });
 
   final Product product;
 
@@ -31,6 +31,7 @@ class AddToCart extends StatelessWidget {
             child: IconButton(
               icon: SvgPicture.asset(
                 "assets/icons/add_to_cart.svg",
+                // ignore: deprecated_member_use
                 color: product.color,
               ),
               onPressed: () {},
@@ -39,10 +40,12 @@ class AddToCart extends StatelessWidget {
           Expanded(
             child: SizedBox(
               height: 50,
-              child: FlatButton(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(18)),
-                color: product.color,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: product.color,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18)),
+                ),
                 onPressed: () {},
                 child: Text(
                   "Buy  Now".toUpperCase(),
