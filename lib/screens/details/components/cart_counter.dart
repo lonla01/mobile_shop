@@ -4,7 +4,7 @@ import '../../../constants.dart';
 
 class CartCounter extends StatefulWidget {
   @override
-  _CartCounterState createState() => _CartCounterState();
+  State<CartCounter> createState() => _CartCounterState();
 }
 
 class _CartCounterState extends State<CartCounter> {
